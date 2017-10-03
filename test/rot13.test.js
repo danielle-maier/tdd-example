@@ -11,7 +11,7 @@ describe('rot13 test', function() {
   it('function should return "n" if "a" is entered', function() {
     expect(rot13.encode('a')).to.equal('n');
   });
-  it('function should return "a" if "n" is entered', function() {
+  it('function should return "A" if "N" is entered', function() {
     expect(rot13.encode('N')).to.equal('A');
   });
   it('function should return encoded string', function() {
