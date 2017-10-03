@@ -12,9 +12,12 @@ describe('rot13 test', function() {
     expect(rot13.encode('a')).to.equal('n');
   });
   it('function should return "a" if "n" is entered', function() {
-    expect(rot13.encode('n')).to.equal('a');
+    expect(rot13.encode('N')).to.equal('A');
   });
   it('function should return encoded string', function() {
     expect(rot13.encode('hello world')).to.equal('uryyb jbeyq')
+  });
+  it('function should return encoded string', function() {
+    expect(rot13.encode('Hey There Neighbor')).to.equal('Url Gurer Arvtuobe')
   });
 });
