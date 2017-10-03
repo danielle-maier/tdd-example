@@ -5,10 +5,7 @@ module.exports = {
     } else if (typeof str !== 'string') {
       return "not a string";
     } else {
-      return str.replace(/[a-zA-Z]/g, function(chr) {
-        var start = chr <= 'Z' ? 65 : 97;
-        return String.fromCharCode(start + (chr.charCodeAt(0) - start + 13) % 26);
-      });
+      return str.replace(/[a-z]/ig, c => Buffer([((d = Buffer(c)[0]) & 95) < 78 ? d + 13 : d - 13]));
     }
   }
 };
